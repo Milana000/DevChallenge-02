@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+#page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+/* HEADER */
+#page .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#page .header .title {
+    width: 45%;
+    text-align: center;
+}
+
+#page .header .title h1 {
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#page .header .about {
+    width: 45%;
+}
+
+#page .header .about h3 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#page .header .about p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* MAIN */
+#page .gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 65px;
+    margin-top: 90px;
+}
+
+#page .gallery .image-position:nth-of-type(3n-1) {
+    margin-top: 90px;
+}
+
+#page .gallery .image-position .info {
+    position: relative;
+    width: 100%;
+}
+
+#page .gallery .image-position .info .job-title {
+    font-family: "PT Serif";
+    font-weight: 400;
+    font-size: 14px;
+    position: absolute;
+    transform-origin: right;
+    transform: rotateZ(90deg);
+    width: 120px;
+    top: 110px;
+    right: -12px;
+    text-transform: uppercase;
+}
+
+#page .gallery .image-position .name {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* FOOTER */
+#page .footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 115px;
+}
+
+#page .footer p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    color: #BDBDBD;
+}
+
+@media screen and (max-width:805px) {
+    #page {
+        padding: 0 20px 0 10px;
+    }
+
+    #page .header {
+        flex-direction: column;
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+
+    #page .header .title {
+        width: 100%;
+    }
+
+    #page .header .about {
+        width: 100%;
+    }
+
+    #page .header .title h1 {
+        text-align: start;
+    }
+
+    #page .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #page .gallery .image-position:nth-of-type(even) {
+        margin-top: 80px;
+    }
+
+    #page .gallery .image-position:nth-of-type(odd) {
+        margin-top: 0;
+    }
+}
